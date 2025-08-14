@@ -15,7 +15,7 @@ It takes user input, checks for moderation compliance, and rephrases it into mul
 ---
 
 ## How It Works
-The application is built around a LangGraph workflow:
+The application is built around a LangGraph workflow
 
 ### Diagram
 ![Workflow Diagram](images/rephrase_agent.png)
