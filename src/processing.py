@@ -1,4 +1,4 @@
-from rephrase_agent import build_graph
+from src.rephrase_agent import build_graph
 from src.config import GRAPH_CONFIG
 
 graph = build_graph()

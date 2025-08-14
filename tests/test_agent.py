@@ -1,5 +1,5 @@
 import pytest
-from rephrase_agent import build_graph
+from src.rephrase_agent import build_graph
 
 config = {"configurable": {'thread_id': 41}}
 
