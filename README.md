@@ -14,6 +14,22 @@ It takes user input, checks for moderation compliance, and rephrases it into mul
 
 ---
 
+## How It Works
+The application is built around a LangGraph workflow:
+
+### Diagram
+![Workflow Diagram](images/rephrase_agent.png)
+
+- Moderate Input: Uses an LLM to check if content is safe.
+
+- Check Moderation: Decides whether to stop or proceed.
+
+- Rephrase Sentence: Generates different tone variations.
+
+- End: Returns final output to the user.
+
+---
+
 ## Setup Instructions
 
 ### 1. Clone the Repository
@@ -38,6 +54,8 @@ Create a .env file in the project root:
 OPENAI_API_KEY="your-openai-api-key"
 ```
 
+---
+
 ## Running the Application
 ### Option 1 — Local Run
 ```bash
@@ -56,20 +74,8 @@ Run the container:
 ```bash
 docker run -p 8501:8501 --name rephrase-app  rephrase-app
 ```
-## How It Works
-The application is built around a LangGraph workflow:
 
-### Diagram
-![Workflow Diagram](images/rephrase_agent.png)
-
-- Moderate Input: Uses an LLM to check if content is safe.
-
-- Check Moderation: Decides whether to stop or proceed.
-
-- Rephrase Sentence: Generates different tone variations.
-
-- End: Returns final output to the user.
-
+---
 
 ## Tech Stack
 
