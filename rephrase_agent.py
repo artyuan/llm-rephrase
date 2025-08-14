@@ -6,7 +6,7 @@ from typing import Literal
 from src.config import llm
 from src.prompt import moderator_prompt, rephrase_prompt
 from src.parsers import ModeratorParser, RephraseParser
-
+import os
 
 class GraphState(TypedDict):
     """
@@ -71,7 +71,6 @@ def rephrase_sentence(state: GraphState) -> GraphState:
             'social_media_output': result['social_media_output'],
             }
 
-
 def build_graph():
     workflow = StateGraph(GraphState)
 
@@ -85,12 +84,4 @@ def build_graph():
     workflow.add_edge("rephrase_sentence", END)
     memory = MemorySaver()
     return workflow.compile(checkpointer=memory)
-
-
-if __name__ == "__main__":
-    graph = build_graph()
-    config = {"configurable": {'thread_id': 41}}
-    prompt = "hey team, we have to talk about how the project is going"
-    response = graph.invoke({'user_input': prompt}, config=config)
-    print(response)
 
