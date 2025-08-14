@@ -34,8 +34,8 @@ The application is built around a LangGraph workflow
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/artyuan/llm-rephrase.git
+cd llm-rephrase
 ```
 
 ### 2. Create and Activate a Virtual Environment
